@@ -1,0 +1,28 @@
+解决GitLab内存消耗大的问题.manual
+
+https://blog.csdn.net/ouyang_peng/article/details/84066417
+
+
+
+linux下获取占用CPU资源最多的10个进程，可以使用如下命令组合：
+
+ps aux|head -1;ps aux|grep -v PID|sort -rn -k +3|head
+
+
+
+linux下获取占用内存资源最多的10个进程，可以使用如下命令组合：
+
+ps aux|head -1;ps aux|grep -v PID|sort -rn -k +4|head
+
+
+查看占用cpu最高的进程
+
+ps aux|head -1;ps aux|grep -v PID|sort -rn -k +3|head
+
+或者top （然后按下M，注意这里是大写）
+
+查看占用内存最高的进程
+
+ps aux|head -1;ps aux|grep -v PID|sort -rn -k +4|head
+
+或者top （然后按下P，注意这里是大写）
